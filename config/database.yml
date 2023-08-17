@@ -24,6 +24,9 @@ default: &default
 development:
   <<: *default
   database: helloworld_development
+  username: postgres
+  password: R@fi0123
+  host: localhost
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -58,6 +61,9 @@ development:
 test:
   <<: *default
   database: helloworld_test
+  username: postgres
+  password: R@fi0123
+  host: localhost
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -82,5 +88,6 @@ test:
 production:
   <<: *default
   database: helloworld_production
-  username: helloworld
-  password: <%= ENV["HELLOWORLD_DATABASE_PASSWORD"] %>
+  username: postgres
+  password: R@fi0123
+  host: localhost
